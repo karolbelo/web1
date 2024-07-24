@@ -1,0 +1,90 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    background-image: url('fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+
+.container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background-color: rgba(255, 255, 255, 0.9); /
+}
+
+.container.active {
+    display: flex;
+}
+
+.list-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+.form-container,
+.menu-container{
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+input,
+button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+}
+
+button {
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #cc0000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #000;
+    color: white;
+}

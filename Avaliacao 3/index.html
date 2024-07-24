@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bello Concessionária</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bello Concessionaria</h1>
+    </header>
+    <!-- Login -->
+    <div id="loginContainer" class="container active">
+        <div class="form-container">
+            <h2>Login</h2>
+            <input type="text" id="login" placeholder="Login">
+            <input type="password" id="senha" placeholder="Senha">
+            <button onclick="login()">Entrar</button>
+        </div>
+    </div>
+
+    <!-- Menu Inicial -->
+    <div id="menuContainer" class="container">
+        <div class="menu-container">
+            <button onclick="exibirContainer('cadastrarContainer')">Cadastrar Veículos</button>
+            <button onclick="exibirContainer('listarContainer'); listarVeiculos()">Listar/Buscar Veículos</button>
+            <button onclick="exibirContainer('excluirContainer'); listarVeiculos()">Excluir Veículos</button>
+        </div>
+    </div>
+
+    <!-- Cadastro dos Veículos -->
+    <div id="cadastrarContainer" class="container">
+        <div class="form-container">
+            <h2>Cadastrar Veículo</h2>
+            <input type="text" id="marca" placeholder="Marca">
+            <input type="text" id="modelo" placeholder="Modelo">
+            <input type="number" id="anoFabricacao" placeholder="Ano de Fabricação">
+            <input type="text" id="cor" placeholder="Cor">
+            <input type="text" id="tipo" placeholder="Tipo">
+            <input type="number" id="kilometragem" placeholder="Kilometragem">
+            <input type="number" id="numeroPortas" placeholder="Número de Portas">
+            <input type="number" id="preco" placeholder="Preço">
+            <button onclick="cadastrarVeiculo()">Cadastrar</button>
+            <button onclick="exibirContainer('menuContainer')">Voltar ao Menu</button>
+        </div>
+    </div>
+
+    <!-- Listar/Buscar Veículos -->
+    <div id="listarContainer" class="container">
+        <div class="list-container">
+            <h2>Listar/Buscar Veículos</h2>
+            <input type="text" id="buscar" placeholder="Buscar por Marca">
+            <button onclick="buscarVeiculos()">Buscar</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Ano de Fabricação</th>
+                        <th>Cor</th>
+                        <th>Tipo</th>
+                        <th>Kilometragem</th>
+                        <th>Número de Portas</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody id="veiculoTableBody">
+                    <!-- A Lista dos veículos vai aqui -->
+                </tbody>
+            </table>
+            <button onclick="exibirContainer('menuContainer')">Voltar ao Menu</button>
+        </div>
+    </div>
+
+    <!-- Exclusão dos Veículos -->
+    <div id="excluirContainer" class="container">
+        <div class="list-container">
+            <h2>Excluir Veículos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Ano de Fabricação</th>
+                        <th>Cor</th>
+                        <th>Tipo</th>
+                        <th>Kilometragem</th>
+                        <th>Número de Portas</th>
+                        <th>Preço</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="excluirTableBody">
+                    <!-- E a Lista dos veículos para exclusão vai aqui -->
+                </tbody>
+            </table>
+            <button onclick="exibirContainer('menuContainer')">Voltar ao Menu</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
